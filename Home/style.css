@@ -1,0 +1,107 @@
+/* General */
+
+body {
+    margin: 0;
+    background-image: url("../Images/General/welcomeimg.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/* Main */
+
+.homeMain {
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.homeSubGrid {
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mainWelcome {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--textColor);
+    text-align: center;
+    user-select: none;
+    animation: pop 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        color: var(--textColor);
+    }
+    100% {
+        transform: scale(1.1);
+        color: var(--hoverTextColor);
+    }
+}
+
+.mainArgs {
+    text-align: left;
+    font-size: 7em;
+    color: var(--textColor);
+    width: min-content;
+    transition: .3s ease-in-out;
+    user-select: none;
+    cursor: default;
+    font-weight: 900;
+}
+
+.mainArgs:hover {
+    color: var(--hoverTextColor);
+}
+
+.argsLeftLine {
+    height: 27rem;
+    width: 2px;
+    position: absolute;
+    border: none;
+    background-color: var(--textColor);
+    left: -5%;
+    bottom: 0;
+}
+
+
+/* Delays */
+
+.arg1 {
+    --fadeDelay: .2s;
+}
+
+.arg2 {
+    --fadeDelay: calc(.2s + var(--animateTime));
+}
+
+.arg3 {
+    --fadeDelay: calc(.2s + calc(var(--animateTime) * 2));
+}
+
+
+/* Fade in animations */
+
+.fadeIn {
+    --animateTime: .8s;
+    opacity: 0;
+    animation: fadeInLeft var(--animateTime) ease-in forwards var(--fadeDelay);
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-200px);
+    }
+    65% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureLand - Info</title>
+    <link rel="stylesheet" href="../General/general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="hidden" id="pageId" value="infoContactUs">
+    <header class="navContainer">
+        <nav class="navBar">
+            <ul class="navList">
+
+                <li class="env">
+                    <ul class="subEnv">
+                        <li class="listEl">
+                            <a href="../Enviroments/index.html#mountain" class="navLink mount">Montagna</a>
+                        </li>
+                        <li class="listEl">
+                            <a href="../Enviroments/index.html#forest" class="navLink forest">Foresta</a>
+                        </li>
+                        <li class="listEl">
+                            <a href="../Enviroments/index.html#ocean" class="navLink ocean">Oceano</a>
+                        </li>
+                        <li class="listEl">
+                            <a href="../Enviroments/index.html#city" class="navLink city">Città</a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li class="other">
+                    <ul class="subOther">
+                        <div class="langBtn">
+                            <div class="indicatorContainer">
+                                <div class="indicator"></div>
+                            </div>
+                        </div>
+                        <li class="listEl">
+                            <a href="#" class="navLink info active">Info</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="infoSection" id="info">
+
+            <div class="infoUs">
+                <h2 class="infoTitle">Più su di noi</h2>
+                <p class="infoArgs">
+                    Se sei qui, ti sarai sicuramente chiesto chi siamo e cosa facciamo di preciso, bene in questa pagina troverai tutte le informazioni che cerchi. Partiamo subito dal dire che noi siamo un gruppo di persone che ama molto viaggiare tra gli ambienti naturali,
+                    e che ancora di più ama la fotografia; in pratica, quello che stiamo cercando di fare è creare un lavoro da questo nostro hobby che ci collega tutti. Abbiamo scelto il nome NatureLand per il semplice motivo che quando qualcuno entra
+                    nel nostro sito, quello che vogliamo rappresentare è una landa di natura in cui ci si può immergere e esplorare, questo lo facciamo attraverso la fotografia: mettendo in mostra le foto di varie specie di animali in giro per il mondo,
+                    diamo una scelta di ambienti così da poter soddisfare tutti. Vogliamo farti innamorare del mondo che ci circonda con le nostre immagini.
+                </p>
+            </div>
+            <div class="infoCollab">
+                <h2 class="infoTitle">Collaborazioni</h2>
+                <p class="infoArgs">
+                    Siamo molto aperti a collaborazioni, infatti, attualmente collaboriamo con il negozio, "Foto de angelis", da cui abbiamo ricevuto alcuni degli accessori fotografici da noi in uso. Volevamo anche aggiungere, che potete usare il codice "NaturaPerTutti"
+                    per ottenere uno sconto del 10% sugli aquisti online fatti nel loro
+                    <a href="http://www.fotodeangelis.it/" target="_new">sito</a>.
+                </p>
+            </div>
+        </section>
+        <section class="contactSection" id="contact">
+            <form class="contactForm" autocomplete="off">
+                <div>
+                    <label for="firstName" id="name">Nome</label>
+                    <input type="text" name="firstName" placeholder="Mario">
+                </div>
+                <div>
+                    <label for="email">Email&nbsp</label>
+                    <input type="text" name="email" placeholder="mario@gmail.com">
+                </div>
+                <textarea name="message" id="msg" cols="30" rows="10" placeholder="Scrivici qualcosa!"></textarea>
+                <button class="submitBtn" type="button"><span class="btnText">invia</span></button>
+            </form>
+        </section>
+    </main>
+
+    <script src="../General/general.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

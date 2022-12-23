@@ -1,0 +1,174 @@
+/* General */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font: inherit;
+}
+
+:root {
+    --navGap: 2rem;
+    --navLinkBorder: 3px;
+    --cityColor: #bcbcbc;
+    --oceanColor: #2ba9df;
+    --forestColor: #60c487;
+    --mountColor: #F08080;
+    --primaryColor: #f3e0d0;
+    --primaryColorShade1: #d7c8ad;
+    --primaryColorShade2: #f7ede4e5;
+    --primaryColorShade3: #BAA89B;
+    --primaryColorShade4: #6B5B50;
+    --primaryColorShade5: #443326;
+    --bodyBack: var(--primaryColorShade1);
+    --textColor: #fae2d199;
+    --hoverTextColor: #fae2d1;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Header */
+
+.navContainer {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    width: 100vw;
+    backdrop-filter: blur(.05rem);
+    background-color: rgba(0, 0, 0, 0.55);
+    border-bottom: 2px solid rgb(28, 28, 28);
+    min-height: 4rem;
+    display: grid;
+    /* font */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.navBar {
+    position: relative;
+}
+
+.navList {
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 var(--navGap);
+}
+
+.subOther,
+.subEnv {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--navGap);
+}
+
+.navLink {
+    padding-bottom: 1.2rem;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: .2s ease-in-out;
+    color: var(--hoverTextColor);
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+}
+
+.info {
+    line-height: 3;
+}
+
+
+/* On hover/focus border */
+
+.mount:hover {
+    border-bottom: var(--navLinkBorder) solid var(--mountColor);
+    color: var(--mountColor);
+}
+
+.forest:hover {
+    border-bottom: var(--navLinkBorder) solid var(--forestColor);
+    color: var(--forestColor);
+}
+
+.ocean:hover {
+    border-bottom: var(--navLinkBorder) solid var(--oceanColor);
+    color: var(--oceanColor);
+}
+
+.city:hover {
+    border-bottom: var(--navLinkBorder) solid var(--cityColor);
+    color: var(--cityColor);
+}
+
+.info:hover {
+    border-bottom: var(--navLinkBorder) solid var(--primaryColor);
+    color: var(--primaryColor);
+}
+
+
+/* Language switch */
+
+.indicatorContainer {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.34);
+    border: 1px rgba(157, 156, 156, 0.179) solid;
+    width: 3.5rem;
+    aspect-ratio: 2/1;
+    border-radius: 10rem;
+    cursor: pointer;
+    margin-top: .9rem;
+}
+
+.indicator {
+    position: absolute;
+    border-radius: 50%;
+    width: 50%;
+    aspect-ratio: 1/1;
+    transition: .3s ease-in-out;
+    background-image: url("../Images/Icons/ita.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.6), inset -1px -1px 4px rgba(0, 0, 0, 0.6), inset -1px 1px 4px rgba(255, 255, 255, .7);
+}
+
+.right {
+    transform: translateX(100%);
+    background-image: url("../Images/Icons/eng.png");
+}
+
+
+/* pageId */
+
+#pageId {
+    position: absolute;
+}
+
+
+/* Under 700px navbar */
+
+@media only screen and (max-width: 700px) {
+    .navContainer {
+        min-height: 10rem;
+    }
+    .navList {
+        grid-auto-flow: row;
+    }
+    .subOther {
+        width: min-content;
+    }
+}
+
+
+/* Utility classes */
